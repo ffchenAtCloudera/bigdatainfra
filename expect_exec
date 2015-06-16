@@ -1,0 +1,13 @@
+#!/usr/bin/expect
+set timeout 10
+set host [lindex $argv 0]
+set username [lindex $argv 1]
+set password [lindex $argv 2]
+set exec_file [lindex $argv 3]
+
+spawn ssh $username@$host $exec_file
+expect {
+  "*assword" {set timeout 300; send "$password\n";}
+  "yes/no" {send "yes\n"}
+}
+expect eof
