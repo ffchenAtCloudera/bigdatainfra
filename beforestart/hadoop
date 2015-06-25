@@ -1,0 +1,11 @@
+1. start every journal node:
+hadoop-daemon.sh start journalnode
+2. at master node:
+hdfs zkfc -formatZK
+3. hdfs namenode -format
+4. scp namenode dir to back-up master
+scp -r /namenode/hadoop/dfs/name/* slave01.chff.dc:/namenode/hadoop/dfs/name/
+scp -r /namenode_repli/hadoop/dfs/name/* slave01.chff.dc:/namenode_repli/hadoop/dfs/name/
+5. start-dfs.sh
+6. on 2 resource manager nodes: start-yarn.sh
+7. mr_healch_check.sh
