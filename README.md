@@ -6,6 +6,10 @@ This project is based on following prevoise works:
 - components jar and images are deployed to nexus via jenkins
 
 How-to-use:
-1. Add cluster slaves nodes in ip.list file.
-2. Run deploy_master.sh at master node.
-3. Run deploy_slave.sh at master node for slave nodes environment set-up.
+1. Add cluster deploy nodes in conf/*.list file.
+2. ./1_deploy_master_envSetup.sh
+3.  update all configuration files in ~/bigdatainfra_deploy/package/
+4. ./2_deploy_master_confUpdate.sh
+5. 3_deploy_slave.sh
+6. Go througn steps in beforestart/${component_name} file
+7. start services and going on play 
