@@ -6,6 +6,7 @@ set password [lindex $argv 2]
 set src_file [lindex $argv 3]
 set dest_file [lindex $argv 4]
 
+#rsync -avuz --bwlimit=2000 --progress  /opt/components/hbase/ master02:/opt/hbase/program
 spawn scp -r $src_file $username@$host:$dest_file
 expect {
   "*assword" {set timeout 300; send "$password\n";}

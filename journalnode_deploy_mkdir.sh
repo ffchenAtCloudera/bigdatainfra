@@ -1,2 +1,2 @@
-mkdir -p /journalnode/hadoop/data/dfs/journalnode/
-chown -R hadoop:hadoop /journalnode
+mkdir -p /data/journalnode/dfs/name/
+chown -R hadoop:hadoop /data/journalnode

@@ -5,7 +5,7 @@ rm -rf /namenode*
 rm -rf /journal*
 rm -rf /home/hadoop
 rm -rf /home/zookeeper
-userdel hadoop
+userdel -f hadoop
 rm -rf ~/bigdatainfra_deploy
 rm -rf ~/journalnode_deploy_mkdir.sh
 rm -rf ~/zookeeper_deploy_mkdir.sh

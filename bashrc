@@ -1,23 +1,28 @@
 export JAVA_HOME=/opt/jdk
-export PATH=$PATH:$JAVA_HOME/bin
+export PATH=$JAVA_HOME/bin:$PATH
 
-export HADOOP_HOME=/opt/hadoop
-export HADOOP_CONF_DIR=/opt/hadoop/etc/hadoop/
-export YARN_CONF_DIR=/opt/hadoop/etc/hadoop/
-export HADOOP_PREFIX=/opt/hadoop
-export HADOOP_YARN_HOME=/opt/hadoop/
-export ZOOKEEPER_HOME=/opt/zookeeper
+export HADOOP_HOME=/opt/hadoop/program
+export HADOOP_CONF_DIR=/opt/hadoop/program/etc/hadoop
+export HADOOP_PID_DIR=/opt/hadoop/pids
+export YARN_CONF_DIR=/opt/hadoop/program/etc/hadoop
+export HADOOP_PREFIX=/opt/hadoop/program
+export HADOOP_YARN_HOME=/opt/hadoop/program
+export HADOOP_MAPRED_PID_DIR=/opt/hadoop/pids
+
+export ZOOKEEPER_HOME=/opt/zookeeper/program
 export ZOO_LOG_DIR=/opt/logs/zookeeper
 
-export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin:$ZOOKEEPER_HOME/bin
+export PATH=$HADOOP_HOME/sbin:$HADOOP_HOME/bin:$ZOOKEEPER_HOME/bin:$PATH
 
-export HBASE_HOME=/opt/hbase
-export PATH=$PATH:$HBASE_HOME/bin
+export HBASE_HOME=/opt/hbase/program
+export PATH=$HBASE_HOME/bin:$PATH
 export HBASE_CONF_DIR=$HBASE_HOME/conf
+export HBASE_PID_DIR=/opt/hbase/pids
 
-export SPARK_HOME=/opt/spark
-export PATH=$PATH:$SPARK_HOME/bin
+export SPARK_HOME=/opt/spark/program
+export PATH=$SPARK_HOME/bin:$PATH
+export SPARK_PID_DIR=/opt/spark/pids
 
-export HIVE_HOME=/opt/hive
-export PATH=$PATH:$HIVE_HOME/bin:$HIVE_HOME/hcatalog/sbin
-export HADOOP_MAPRED_HOME=/opt/hadoop
+export HIVE_HOME=/opt/hive/program
+export PATH=$HIVE_HOME/bin:$HIVE_HOME/hcatalog/sbin:$PATH
+export HADOOP_MAPRED_HOME=/opt/hadoop/program
